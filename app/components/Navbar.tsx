@@ -57,7 +57,7 @@ export default function Navbar() {
         h={16}
         justifyContent="space-between"
         p="2rem"
-        background="#2f2f2f"
+        background="#000a1d"
         color="white"
         alignContent="center"
         alignItems={"center"}
@@ -89,7 +89,7 @@ export default function Navbar() {
               </Avatar>
             </Stack>
           </MenuButton>
-          <MenuList alignItems={"center"} background="gray.700">
+          <MenuList alignItems={"center"} background="gray.800">
             <br />
             <Center>
               <Avatar
@@ -105,9 +105,15 @@ export default function Navbar() {
             </Center>
             <br />
             <MenuDivider />
-            <MenuItem background="gray.700">Your Orders</MenuItem>
-            <MenuItem background="gray.700">Add to balance</MenuItem>
-            <MenuItem background="gray.700">Logout</MenuItem>
+            <MenuItem background="gray.800" _hover={{ background: "gray.600" }}>
+              Your Orders
+            </MenuItem>
+            <MenuItem background="gray.800" _hover={{ background: "gray.600" }}>
+              Add to balance
+            </MenuItem>
+            <MenuItem background="gray.800" _hover={{ background: "gray.600" }}>
+              Logout
+            </MenuItem>
           </MenuList>
         </Flex>
       </Flex>
