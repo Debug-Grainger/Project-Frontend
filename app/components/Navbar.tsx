@@ -21,6 +21,7 @@ import {
   MenuItem,
   MenuDivider,
   Center,
+  background,
 } from "@chakra-ui/react";
 
 interface Props {
@@ -71,7 +72,7 @@ export default function Navbar() {
           <Button onClick={toggleColorMode}>
             {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
           </Button>
-          <Box px={10} cursor="pointer">
+          <Box px={5} cursor="pointer">
             <MdLocalGroceryStore size={35} />
           </Box>
           <Badge ml="1" fontSize="1rem" colorScheme="green" alignSelf="start">
@@ -88,7 +89,7 @@ export default function Navbar() {
               </Avatar>
             </Stack>
           </MenuButton>
-          <MenuList alignItems={"center"}>
+          <MenuList alignItems={"center"} background="gray.700">
             <br />
             <Center>
               <Avatar
@@ -100,13 +101,13 @@ export default function Navbar() {
             </Center>
             <br />
             <Center>
-              <p>Username</p>
+              <p>(Username)</p>
             </Center>
             <br />
             <MenuDivider />
-            <MenuItem>Your Orders</MenuItem>
-            <MenuItem>Add to balance</MenuItem>
-            <MenuItem>Logout</MenuItem>
+            <MenuItem background="gray.700">Your Orders</MenuItem>
+            <MenuItem background="gray.700">Add to balance</MenuItem>
+            <MenuItem background="gray.700">Logout</MenuItem>
           </MenuList>
         </Flex>
       </Flex>
