@@ -1,11 +1,11 @@
 import Navbar from "./Navbar";
-import Sector from "./Sector";
+import Section from "./Section";
 
 export default function Hero() {
   return (
     <div>
       <Navbar />
-      <Sector />
+      <Section />
     </div>
   );
 }
