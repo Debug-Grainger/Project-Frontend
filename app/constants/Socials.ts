@@ -1,39 +1,31 @@
 const Socials = [
   {
     name: "facebook",
+    color: "#1877f2",
   },
   {
     name: "instagram",
+    color: "#e1306c",
   },
   {
     name: "twitter",
+    color: "#020202",
   },
   {
     name: "youtube",
+    color: "#ff0000",
   },
   {
-    name: "linkedin",
+    name: "Tik Tok",
+    color: "#010101",
   },
+  // {
+  //   name: "Snapchat",
+  //   color: "#fffc00",
+  // },
   {
-    name: "github",
-  },
-  {
-    name: "medium",
-  },
-  {
-    name: "codepen",
-  },
-  {
-    name: "dribbble",
-  },
-  {
-    name: "pinterest",
-  },
-  {
-    name: "tumblr",
-  },
-  {
-    name: "reddit",
+    name: "Discord",
+    color: "#5865f2",
   },
 ];
 
