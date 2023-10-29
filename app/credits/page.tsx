@@ -1,24 +1,24 @@
 "use client"
 import Navbar from "../components/Navbar";
-import {Button, Text, Flex} from '@chakra-ui/react'
-import { useRouter } from 'next/navigation';
-import Link from "next/link";
+import { Button, Text, Flex, Center, Menu, MenuItem, MenuButton } from '@chakra-ui/react';
+import { FaArrowRight, FaCoins, FaCreditCard, FaGooglePay, FaPaypal } from 'react-icons/fa';
 export default function Credits() {
-  const router = useRouter();
 
 
-
-    return (<div>
+  return (
+    <div>
       <Navbar />
-      <div>
-      <Text>Choose an option:</Text>
-      <Flex justifyContent="center" alignItems="center">
-      <Link href={"/credits/option1"}> <Button borderRadius="5px" boxShadow="0 0 5px rgba(0, 0, 0, 0.3)" colorScheme="blue" >Option 1</Button> </Link>
-      <Link href={"/credits/option2"}> <Button borderRadius="5px" boxShadow="0 0 5px rgba(0, 0, 0, 0.3)" colorScheme="blue" >Option 2</Button> </Link>
-      <Link href={"/credits/option3"}> <Button borderRadius="5px" boxShadow="0 0 5px rgba(0, 0, 0, 0.3)" colorScheme="blue" >Option 3</Button> </Link>
-    </Flex>
+      <Center h="100vh">
+        <Flex direction="column" alignItems="center" borderRadius="md" boxShadow="md" p={8} border="1px solid gray" width="50%">
+          <Text fontSize="2xl" fontWeight="bold" mb={4}>Choose a payment method:</Text>
+          <Menu>
+            <MenuButton as={Button} rightIcon={<FaCoins />} size="lg" >Current Credit: $1</MenuButton>
+            <MenuButton as={Button} value="credit-card" rightIcon={<FaCreditCard />} >Credit Card</MenuButton>
+            <MenuButton as={Button} value="paypal" rightIcon={<FaPaypal />} >PayPal</MenuButton>
+            <MenuButton as={Button} value="google-pay" rightIcon={<FaGooglePay />} >Google Pay</MenuButton>
+          </Menu>
+        </Flex>
+      </Center>
     </div>
-      </div>
-    );
-  }
-  
+  );
+}
