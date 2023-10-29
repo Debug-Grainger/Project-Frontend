@@ -23,6 +23,7 @@ import {
   Center,
   background,
 } from "@chakra-ui/react";
+import Link from "next/link";
 
 interface Props {
   children: React.ReactNode;
@@ -63,7 +64,8 @@ export default function Navbar() {
         alignItems={"center"}
       >
         <Flex w="50%" alignItems="center" justifyContent="flex-start">
-          <Heading>NO NAME</Heading>
+        <Link href={"/"}> <Heading>NO NAME</Heading>
+        </Link>
         </Flex>
 
         {/* Shtova kete pr butonin e nates ZZZ */}
@@ -109,7 +111,9 @@ export default function Navbar() {
               Your Orders
             </MenuItem>
             <MenuItem background="gray.800" _hover={{ background: "gray.600" }}>
+              <Link href={"/credits"}>
               Add to balance
+              </Link>
             </MenuItem>
             <MenuItem background="gray.800" _hover={{ background: "gray.600" }}>
               Logout
