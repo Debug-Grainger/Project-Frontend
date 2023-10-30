@@ -8,6 +8,7 @@ import {
   Menu,
   MenuItem,
   MenuButton,
+  useColorModeValue
 } from "@chakra-ui/react";
 import {
   FaArrowRight,
@@ -20,12 +21,13 @@ export default function Credits() {
   return (
     <div>
       <Navbar />
-      <Center h="100vh">
+      <Center           bg={useColorModeValue("gray.100", "rgba(0, 0, 0, 0.80)")}
+ h="100vh">
         <Flex
           direction="column"
           alignItems="center"
           gap="1rem"
-          borderRadius="md"
+          borderRadius="3xl"
           boxShadow="md"
           p={8}
           border="1px solid gray"
@@ -40,6 +42,8 @@ export default function Credits() {
               rightIcon={<FaCoins />}
               alignSelf="flex-start"
               size="lg"
+              borderRadius="2xl"
+              color={useColorModeValue("yellow.300", "gray.50")}
             >
               Current Credit: $1
             </MenuButton>
@@ -54,6 +58,7 @@ export default function Credits() {
               <MenuButton
                 as={Button}
                 value="credit-card"
+                size={"lg"}
                 rightIcon={<FaCreditCard />}
               >
                 Credit Card

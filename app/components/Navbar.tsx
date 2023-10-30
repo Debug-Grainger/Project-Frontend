@@ -29,25 +29,6 @@ interface Props {
   children: React.ReactNode;
 }
 
-const NavLink = (props: Props) => {
-  const { children } = props;
-
-  return (
-    <Box
-      as="a"
-      px={2}
-      py={1}
-      rounded={"md"}
-      _hover={{
-        textDecoration: "none",
-        bg: useColorModeValue("gray.200", "gray.700"),
-      }}
-      href={"#"}
-    >
-      {children}
-    </Box>
-  );
-};
 export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -62,6 +43,7 @@ export default function Navbar() {
         color="white"
         alignContent="center"
         alignItems={"center"}
+        bg={useColorModeValue("rgb(17, 17, 17)", "rgb(3, 3, 3)")}
       >
         <Flex w="50%" alignItems="center" justifyContent="flex-start">
         <Link href={"/"}> <Heading>NO NAME</Heading>
