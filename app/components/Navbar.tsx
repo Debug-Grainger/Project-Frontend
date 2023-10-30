@@ -92,11 +92,11 @@ export default function Navbar() {
             <MenuItem background="gray.800" _hover={{ background: "gray.600" }}>
               Your Orders
             </MenuItem>
+            <Link href={"/credits"}>
             <MenuItem background="gray.800" _hover={{ background: "gray.600" }}>
-              <Link href={"/credits"}>
               Add to balance
-              </Link>
             </MenuItem>
+            </Link>
             <MenuItem background="gray.800" _hover={{ background: "gray.600" }}>
               Logout
             </MenuItem>
